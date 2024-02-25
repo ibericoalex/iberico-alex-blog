@@ -1,8 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.views import generic
+from .models import Testimonial
 
 # Create your views here.
-
-
-def my_testimonials(request):
-    return HttpResponse("Hello, Testimonials!")
+class TestimonialsList(generic.ListView):
+    queryset = Testimonial.objects.all()
+    template_name = "testimonial_list.html"
