@@ -14,6 +14,12 @@ class Testimonial(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     updated_on = models.DateTimeField(auto_now=True)
 
+    class Meta:
+        ordering = ["-created_on"]
+
+    def __str__(self):
+        return f"Testimonial by {self.author}"
+
 
 ##_______________________________________WHAT TYPE IS AN AUTHOR VISUAL??
 #    author_visual =
