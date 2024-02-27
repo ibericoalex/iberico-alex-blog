@@ -1,6 +1,7 @@
 {% load static %}
 {% url 'home' as home_url %}
 {% url 'about' as about_url %}
+{% url 'testimonials' as testimonials_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
@@ -55,6 +56,15 @@
                           >About</a
                         >
                     </li>
+                    <li class="nav-item">
+                        <a
+                          class="nav-link
+                          {% if request.path == testimonials_url %}active{%endif%}"
+                          aria-current="page"
+                          href="{% url 'testimonials' %}"
+                          >Testimonials</a
+                        >
+                      </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
