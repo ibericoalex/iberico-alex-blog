@@ -1,15 +1,27 @@
-from django.shortcuts import render, reverse
+from django.shortcuts import render, get_object_or_404, reverse
 from .models import Testimonials
+from .forms import TestimonialForm
+from django.contrib import messages
+from django.http import HttpResponseRedirect
 
 
 def testimonials_list(request):
     """
     Renders the Testimonials page
     """
-    testimonials = Testimonials.objects.all().order_by('-created_on') 
+    testimonials = Testimonials.objects.filter(status=1).order_by('-created_on') 
+    testimonials_form = TestimonialForm()
+
+    if request.method == "POST":
+        testimonials_form = TestimonialForm(data=request.POST)
+        if testimonials_form.is_valid():
+            testimonials_form.instance.author = request.user
+            testimonials_form.save()
+            messages.add_message(request, messages.SUCCESS, "Saved!")
+        return HttpResponseRedirect(reverse('testimonials'))
 
     return render(
         request,
-        "testimonials/testimonials.html",
-        {"testimonials": testimonials},
+        "testimonials/index.html",
+        {"testimonials": testimonials, "form": testimonials_form},
     )

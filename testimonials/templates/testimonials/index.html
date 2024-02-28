@@ -4,7 +4,32 @@
 
 {% block content %}
 <div class="container mt-5">
+  <!-- Blog Entries Column -->
+  <div class="col-12 mt-3 left">
     <div class="row">
+        {% for testimonial in testimonials %}
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-body">
+                        <div class="image-flash">
+                            <p class="author">Author: {{ testimonial.author }}</p>
+                        </div>
+                
+                        <p class="card-text">{{ testimonial.content | safe }}</p>
+                    <hr />
+                    </p>
+                </div>
+            </div>
+        </div>
+        {% if forloop.counter|divisibleby:3 %}
+    </div>
+    <div class="row">
+        {% endif %}
+        {% endfor %}
+
+    </div>
+</div>
+    <!-- <div class="row">
         <div class="col-12 col-md-4 text-center">
           {% if "placeholder" in testimonials.profile_image.url %}
           <img src="{% static 'images/nobody.jpg' %}" width="75%"
@@ -18,7 +43,7 @@
             <h2>{{ testimonials.title }}</h2>
             {{ testimonials.content | safe }}
         </div>
-    </div>
+    </div> -->
     <div class="row">
         <div class="col text-right">
           <!-- Updated on field goes in here -->
@@ -38,7 +63,7 @@
             <!-- add your form here. Your submit button should 
                                 have the classes of btn, btn-secondary -->
             <form method="post">
-              {{ collaborate_form | crispy }}
+              {{ form | crispy }}
               {% csrf_token %}
               <button class="btn btn-secondary"
                 type="submit">Submit</button>
