@@ -4,50 +4,42 @@
 
 {% block content %}
 <div class="container mt-5">
-  <!-- Blog Entries Column -->
-  <div class="col-12 mt-3 left">
-    <div class="row">
-        {% for testimonial in testimonials %}
-        <div class="col-md-4">
-            <div class="card mb-4">
-                <div class="card-body">
-                        <div class="image-flash">
-                            <p class="author">Author: {{ testimonial.author }}</p>
-                        </div>
-                
-                        <article class="card-text">{{ testimonial.content | safe }}</article>
-                    <hr />
-                    </p>
+    <!-- Headline for Testimonials -->
+    <h2 class="text-center mb-4">Latest Testimonials</h2>
+
+    <!-- Testimonials Entries Section -->
+    <div class="col-12 mt-3">
+        <div class="row">
+            {% for testimonial in testimonials %}
+            <div class="col-md-4 mb-4">
+                <div class="card shadow">
+                    <div class="card-body">
+                            <article class="card-text">{{ testimonial.content | safe }}</article>
+                            <hr/>
+                            <div class="row">
+                                <div class="col text-right">                    
+                                <p class="text-end"><em>Created by <strong>{{ testimonial.author }}</strong> <br> on {{ testimonial.created_on|date:"d/m/Y" }}</em></p>
+                                </div>
+                            </div>
+                    </div>
                 </div>
             </div>
+            {% if forloop.counter|divisibleby:3 %}
         </div>
-        {% if forloop.counter|divisibleby:3 %}
-    </div>
-    <div class="row">
-        {% endif %}
-        {% endfor %}
-
-    </div>
-</div>
-
-    <div class="row">
-        <div class="col text-right">
-          <!-- Updated on field goes in here -->
-    
-          <p class="text-end"><em>Updated on: {{ testimonials.updated_on }}</em></p>
+        <div class="row">
+            {% endif %}
+            {% endfor %}
         </div>
     </div>
+    <hr/>
+
+    <!-- Leave your testimonials Section -->
     <div class="row justify-content-center">
-        <div class="col-12 col-md-6 my-5">
-            <h2>Let's collaborate!</h2>
-            <p>I believe in the power of shared knowledge and collective effort.
-                Whether you have a project in mind, wish to co-author
-                an article, or simply want to brainstorm some ideas,
-                I'm excited to hear from you. Fill out the form
-                and we can get the ball rolling!</p>
+        <div class="col-12 col-md-10 my-5">
+            <h2 class="text-center mb-4">Leave your testimonial!</h2>
+            <p>I'm eager to hear about your journey with Iberico Alex Photography! Your insights and stories are incredibly important to me, as they reflect the heart and soul I pour into every photograph. Whether it was a quiet, intimate session or a grand, joyous celebration, I invite you to share how the moments we captured together have resonated with you. Your testimonial is a cherished chapter in my ongoing story of passion and creativity, and I look forward to reading your reflections.</p>
 
-            <!-- add your form here. Your submit button should 
-                                have the classes of btn, btn-secondary -->
+            <!-- Submit Form Section -->
             <form method="post">
               {{ form | crispy }}
               {% csrf_token %}
