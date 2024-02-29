@@ -44,12 +44,16 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == home_url %}active" aria-current="page{% endif %}"
-                            href="{% url 'home' %}">Blog</a>
+                        <a 
+                            class="nav-link custom-navbar 
+                            {% if request.path == home_url %}active" 
+                            aria-current="page{% endif %}"
+                            href="{% url 'home' %}">Blog
+                        </a>
                     </li>
                     <li class="nav-item">
                         <a
-                          class="nav-link
+                          class="nav-link custom-navbar
                           {% if request.path == testimonials_url %}active"
                           aria-current="page{% endif %}"
                           href="{% url 'testimonials' %}"
@@ -58,7 +62,7 @@
                       </li>
                       <li class="nav-item">
                         <a
-                          class="nav-link
+                          class="nav-link custom-navbar
                           {% if request.path == about_url %}active"
                           aria-current="page{% endif %}"
                           href="{% url 'about' %}"
@@ -70,14 +74,26 @@
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == logout_url %}active" aria-current="page{% endif %}" href="{% url 'account_logout' %}">Logout</a>
+                        <a class="nav-link custom-navbar
+                        {% if request.path == logout_url %}active" 
+                        aria-current="page{% endif %}" 
+                        href="{% url 'account_logout' %}">Logout
+                    </a>
                     </li>
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == signup_url %}active" aria-current="page{% endif %}" href="{% url 'account_signup' %}">Register</a>
+                        <a class="nav-link custom-navbar
+                        {% if request.path == signup_url %}active" 
+                        aria-current="page{% endif %}" 
+                        href="{% url 'account_signup' %}">Register
+                    </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == login_url %}active" aria-current="page{% endif %}" href="{% url 'account_login' %}">Login</a>
+                        <a class="nav-link custom-navbar
+                        {% if request.path == login_url %}active" 
+                        aria-current="page{% endif %}" 
+                        href="{% url 'account_login' %}">Login
+                    </a>
                     </li>
                     {% endif %}
                 </ul>
@@ -88,7 +104,7 @@
     <!-- displaying Django messages -->
     <div class="container">
         <div class="row">
-        <div class="col-md-8 offset-md-2">
+        <div class="col-md-12">
             {% for message in messages %}
             <div class="alert {{ message.tags }} alert-dismissible
             fade show" id="msg" role="alert">
@@ -105,7 +121,7 @@
         {% if user.is_authenticated %}
         <p class="text-end m-3">You are logged in as {{ user }}</p>
         {% else %}
-        <p class="text-end m-3">You are not logged in</p>
+        <p class="text-end m-3">Log in to comment and leave testimonials.</p>
         {% endif %}
 
         {% block content %}
@@ -116,11 +132,17 @@
 
     <!-- Footer -->
     <footer class="footer mt-auto py-3 dark-bg">
-        <p class="m-0 text-center text-white">Copyright 2024 Iberico Alex</p>
-        <p class="m-0 text-center text-white">Follow us: <i class="fab fa-facebook-square ms-3"></i>
-            <i class="fab fa-twitter-square ms-3"></i>
-            <i class="fab fa-instagram-square ms-3"></i>
-            <i class="fab fa-youtube-square ms-3"></i>
+        <p class="m-0 text-center text-white">Follow me: 
+            <a href="https://www.facebook.com/ibericoalexphotography" class="ms-3 text-white" target="_blank" aria-label="Visit facebook page (opens in a new tab)">
+                <i class="fab fa-facebook-square"></i>
+            </a>
+            <a href="https://instagram.com/iberico_alex/" class="ms-3 text-white" target="_blank">
+                <i class="fab fa-instagram-square" aria-label="Visit instagram page (opens in a new tab)"></i>
+            </a>
+            <a href="https://www.youtube.com/@ibericoalex" class="ms-3 text-white" target="_blank">
+                <i class="fab fa-youtube-square" aria-label="Visit youtube page (opens in a new tab)"></i>
+            </a>
+        <p class="m-0 text-center text-white">© Copyright 2024 Iberico Alex Photography</p>
         </p>
     </footer>
 

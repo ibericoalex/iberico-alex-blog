@@ -6,11 +6,11 @@ body {
     font-family: Lato, sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
-    color: #4A4A4F;
+    color: #f00;
 }
 
 .red-o {
-    color: #E84610;
+    color: #f00;
 }
 
 .thin {
@@ -22,7 +22,7 @@ body {
 }
 
 .dark-bg {
-    background-color: #445261;
+    background-color: #000000;
 }
 
 .main-bg {
@@ -67,7 +67,7 @@ body {
 }
 
 .masthead-text {
-    background-color: #445261;
+    background-color: #000;
     color: white;
     position: relative;
 }
@@ -77,19 +77,19 @@ body {
     overflow: hidden;
 }
 
-.masthead-image:after {
+/* .masthead-image:after {
     content: "";
     position: absolute;
     top: 0;
     right: 90%;
     height: 100%;
     width: 150%;
-    background: #445261;
+    background: #000;
     -webkit-transform: skew(15deg);
     -moz-transform: skew(15deg);
     transform: skew(15deg);
     z-index: 100;
-}
+} */
 
 .post-link {
     text-decoration: none;
@@ -98,7 +98,7 @@ body {
 
 .post-link:hover,
 .page-link {
-    color: #E84610;
+    color: #f00;
 }
 
 .post-title {
@@ -135,19 +135,23 @@ body {
 }
 
 .btn-like {
-    color: #E84610;
+    color: #f00;
     border: none;
     background: transparent;
 }
 
 .btn-delete {
     color: #fff;
-    background: #E84610;
+    background: #f00;
+}
+
+.btn-danger {
+    background-color: #f00;
 }
 
 .btn-like:hover,
 .btn-like:active {
-    color: #E84610;
+    color: #f00;
     background: transparent;
     border: none;
 }
@@ -160,3 +164,7 @@ body {
     color: rgb(222, 146, 168);
 }
 
+.custom-navbar {
+    text-transform: uppercase;
+    font-weight: 500;
+}

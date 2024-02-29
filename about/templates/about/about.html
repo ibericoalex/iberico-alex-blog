@@ -4,8 +4,12 @@
 
 {% block content %}
 <div class="container mt-5">
+    <!-- Headline for Testimonials -->
+    <h2 class="text-center mb-4">{{ about.title }}</h2>
+
+    <!-- About section -->
     <div class="row">
-        <div class="col-12 col-md-4 text-center">
+        <div class="col-10 col-md-4 mb-4 text-center">
           {% if "placeholder" in about.profile_image.url %}
           <img src="{% static 'images/nobody.jpg' %}" width="75%"
             alt="placeholder image" >
@@ -15,25 +19,21 @@
           {% endif %}
         </div>
         <div class="col-12 col-md-8">
-            <h2>{{ about.title }}</h2>
             {{ about.content | safe }}
         </div>
     </div>
     <div class="row">
-        <div class="col text-right">
-          <!-- Updated on field goes in here -->
-    
+        <!-- <div class="col text-right">
           <p class="text-end"><em>Updated on: {{ about.updated_on }}</em></p>
-        </div>
+        </div> -->
     </div>
+    <hr/>
+
+    <!-- Get in Touch Section -->
     <div class="row justify-content-center">
-        <div class="col-12 col-md-6 my-5">
-            <h2>Let's collaborate!</h2>
-            <p>I believe in the power of shared knowledge and collective effort.
-                Whether you have a project in mind, wish to co-author
-                an article, or simply want to brainstorm some ideas,
-                I'm excited to hear from you. Fill out the form
-                and we can get the ball rolling!</p>
+        <div class="col-12 col-md-10 my-5">
+            <h2>Get in touch!</h2>
+            <p>Interested in capturing life's precious moments with Iberico Alex Photography? Whether you're curious about booking a session, inquiring about pricing, or just want to discuss creative ideas, I'm here to help. Reach out to start a conversation about how we can bring your vision to life through the art of photography. I'm looking forward to connecting with you and exploring the possibilities together.</p>
 
             <!-- add your form here. Your submit button should 
                                 have the classes of btn, btn-secondary -->

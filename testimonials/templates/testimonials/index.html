@@ -12,15 +12,14 @@
         <div class="row">
             {% for testimonial in testimonials %}
             <div class="col-md-4 mb-4">
-                <div class="card shadow">
-                    <div class="card-body">
+                <div class="card">
+                    <div class="card-body shadow">
                             <article class="card-text">{{ testimonial.content | safe }}</article>
-                            <hr/>
-                            <div class="row">
-                                <div class="col text-right">                    
-                                <p class="text-end"><em>Created by <strong>{{ testimonial.author }}</strong> <br> on {{ testimonial.created_on|date:"d/m/Y" }}</em></p>
-                                </div>
-                            </div>
+                      </div>
+                    <div class="row">
+                        <div class="col text-right">                    
+                        <p class="text-end text-muted"><em>Written by <strong>{{ testimonial.author }}</strong> on {{ testimonial.created_on|date:"d/m/Y" }}</em></p>
+                        </div>
                     </div>
                 </div>
             </div>
