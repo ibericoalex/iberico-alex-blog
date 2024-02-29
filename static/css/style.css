@@ -77,6 +77,10 @@ body {
     overflow: hidden;
 }
 
+.profile-image {
+    width: 75%;
+}
+
 .post-link {
     text-decoration: none;
     color: #445261;
