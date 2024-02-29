@@ -15,7 +15,7 @@
                             <p class="author">Author: {{ testimonial.author }}</p>
                         </div>
                 
-                        <p class="card-text">{{ testimonial.content | safe }}</p>
+                        <article class="card-text">{{ testimonial.content | safe }}</article>
                     <hr />
                     </p>
                 </div>
@@ -29,21 +29,7 @@
 
     </div>
 </div>
-    <!-- <div class="row">
-        <div class="col-12 col-md-4 text-center">
-          {% if "placeholder" in testimonials.profile_image.url %}
-          <img src="{% static 'images/nobody.jpg' %}" width="75%"
-            alt="placeholder image" >
-          {% else %}
-          <img src="{{ testimonials.profile_image.url }}" width="75%"
-            alt="{{ testimonials.title }}">
-          {% endif %}
-        </div>
-        <div class="col-12 col-md-8">
-            <h2>{{ testimonials.title }}</h2>
-            {{ testimonials.content | safe }}
-        </div>
-    </div> -->
+
     <div class="row">
         <div class="col text-right">
           <!-- Updated on field goes in here -->

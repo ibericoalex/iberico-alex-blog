@@ -1,7 +1,6 @@
 from django.contrib import admin
-from .models import Testimonials
 from django_summernote.admin import SummernoteModelAdmin
-
+from .models import Testimonials
 
 @admin.register(Testimonials)
 class TestimonialsAdmin(SummernoteModelAdmin):
