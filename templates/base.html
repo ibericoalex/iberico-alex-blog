@@ -10,7 +10,9 @@
 <html class="h-100" lang="en">
 
 <head>
+    <!-- Page Title -->
     <title>Iberico Alex Blog</title>
+    <!-- Responsive Design Meta Tag -->
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
     <!-- Google Fonts CSS -->
@@ -32,17 +34,21 @@
 
 <body class="d-flex flex-column h-100 main-bg">
 
-    <!-- Navigation -->
+    <!-- Navigation Bar Section -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container-fluid">
+            <!-- Brand Name -->
             <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">IBERICO ALEX<span
                         class="thin">|Photography</span></span></a>
+            <!-- Toggler for Mobile View -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <!-- Navigation Links -->
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- Home Link -->
                     <li class="nav-item">
                         <a 
                             class="nav-link custom-navbar 
@@ -51,49 +57,58 @@
                             href="{% url 'home' %}">Blog
                         </a>
                     </li>
+                    <!-- Testimonials Link -->
                     <li class="nav-item">
                         <a
-                          class="nav-link custom-navbar
-                          {% if request.path == testimonials_url %}active"
-                          aria-current="page{% endif %}"
-                          href="{% url 'testimonials' %}"
-                          >Testimonials</a
-                        >
-                      </li>
-                      <li class="nav-item">
+                            class="nav-link custom-navbar
+                            {% if request.path == testimonials_url %}active"
+                            aria-current="page{% endif %}"
+                            href="{% url 'testimonials' %}"
+                            >Testimonials
+                        </a>
+                    </li>
+                    <!-- About Link -->
+                    <li class="nav-item">
                         <a
-                          class="nav-link custom-navbar
-                          {% if request.path == about_url %}active"
-                          aria-current="page{% endif %}"
-                          href="{% url 'about' %}"
-                          >About</a
-                        >
+                            class="nav-link custom-navbar
+                            {% if request.path == about_url %}active"
+                            aria-current="page{% endif %}"
+                            href="{% url 'about' %}"
+                            >About
+                        </a>
                     </li>
                 </ul>
                 <!-- Right aligned links -->
+                <!-- Authentication Links -->
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     {% if user.is_authenticated %}
+                    <!-- Logout Link -->
                     <li class="nav-item">
-                        <a class="nav-link custom-navbar
-                        {% if request.path == logout_url %}active" 
-                        aria-current="page{% endif %}" 
-                        href="{% url 'account_logout' %}">Logout
-                    </a>
+                        <a 
+                            class="nav-link custom-navbar
+                            {% if request.path == logout_url %}active" 
+                            aria-current="page{% endif %}" 
+                            href="{% url 'account_logout' %}">Logout
+                        </a>
                     </li>
                     {% else %}
+                    <!-- Register Link -->
                     <li class="nav-item">
-                        <a class="nav-link custom-navbar
-                        {% if request.path == signup_url %}active" 
-                        aria-current="page{% endif %}" 
-                        href="{% url 'account_signup' %}">Register
-                    </a>
+                        <a 
+                            class="nav-link custom-navbar
+                            {% if request.path == signup_url %}active" 
+                            aria-current="page{% endif %}" 
+                            href="{% url 'account_signup' %}">Register
+                        </a>
                     </li>
+                    <!-- Login Link -->
                     <li class="nav-item">
-                        <a class="nav-link custom-navbar
-                        {% if request.path == login_url %}active" 
-                        aria-current="page{% endif %}" 
-                        href="{% url 'account_login' %}">Login
-                    </a>
+                        <a 
+                            class="nav-link custom-navbar
+                            {% if request.path == login_url %}active" 
+                            aria-current="page{% endif %}" 
+                            href="{% url 'account_login' %}">Login
+                        </a>
                     </li>
                     {% endif %}
                 </ul>
@@ -101,7 +116,7 @@
         </div>
     </nav>
 
-    <!-- displaying Django messages -->
+    <!-- Django Messages Display Section -->
     <div class="container">
         <div class="row">
         <div class="col-md-12">
@@ -117,7 +132,9 @@
         </div>
     </div>
     
+    <!-- Main Content Section -->
     <main class="flex-shrink-0 main-bg">
+        <!-- User Authentication Status Message -->
         {% if user.is_authenticated %}
         <p class="text-end m-3">You are logged in as {{ user }}</p>
         {% else %}
@@ -125,33 +142,36 @@
         {% endif %}
 
         {% block content %}
-        <!-- Content Goes here -->
+        <!-- Dynamic Content Goes Here -->
         {% endblock content %}
-
     </main>
 
-    <!-- Footer -->
+    <!-- Footer Section -->
     <footer class="footer mt-auto py-3 dark-bg">
-        <div class="m-0 text-center text-white">Follow me: 
+        <div class="m-0 text-center text-white">
+            <!-- Social Media Links -->
+            Follow me: 
             <a href="https://www.facebook.com/ibericoalexphotography" 
-            class="ms-3 text-white" target="_blank" 
-            aria-label="Visit facebook page (opens in a new tab)">
-            <i class="fab fa-facebook-square"></i>
+                class="ms-3 text-white" target="_blank" 
+                aria-label="Visit facebook page (opens in a new tab)">
+                <i class="fab fa-facebook-square"></i>
             </a>
             <a href="https://instagram.com/iberico_alex/" 
-            class="ms-3 text-white" target="_blank"
-            aria-label="Visit instagram page (opens in a new tab)">
+                class="ms-3 text-white" target="_blank"
+                aria-label="Visit instagram page (opens in a new tab)">
                 <i class="fab fa-instagram-square"></i>
             </a>
             <a href="https://www.youtube.com/@ibericoalex" 
-            class="ms-3 text-white" target="_blank"
-            aria-label="Visit youtube page (opens in a new tab)">
-            <i class="fab fa-youtube-square"></i>
+                class="ms-3 text-white" target="_blank"
+                aria-label="Visit youtube page (opens in a new tab)">
+                <i class="fab fa-youtube-square"></i>
             </a>
+            <!-- Copyright Notice -->
             <p class="m-0 text-center text-white">© Copyright 2024 Iberico Alex Photography</p>
         </div>
     </footer>
 
+    <!-- Bootstrap JavaScript Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
         </script>

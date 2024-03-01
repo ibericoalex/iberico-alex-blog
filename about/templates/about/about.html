@@ -10,22 +10,22 @@
     <!-- About section -->
     <div class="row">
         <div class="col-10 col-md-4 text-center">
+          <!-- Condition: Display default image if no profile image is available -->
           {% if "placeholder" in about.profile_image.url %}
           <img src="{% static 'images/nobody.jpg' %}" width="75%" class="profile-image"
             alt="placeholder image" >
           {% else %}
+          <!-- Display profile image if available -->
           <img src="{{ about.profile_image.url }}"  width="75%" class="profile-image"
             alt="{{ about.title }}">
           {% endif %}
         </div>
         <div class="col-12 col-md-8 pt-2">
+          <!-- Display about content -->
             {{ about.content | safe }}
         </div>
     </div>
     <div class="row">
-        <!-- <div class="col text-right">
-          <p class="text-end"><em>Updated on: {{ about.updated_on }}</em></p>
-        </div> -->
     </div>
     <hr/>
 
@@ -34,12 +34,11 @@
         <div class="col-12 col-md-10 my-5">
             <h2>Get in touch!</h2>
             <p>Interested in capturing life's precious moments with Iberico Alex Photography? Whether you're curious about booking a session, inquiring about pricing, or just want to discuss creative ideas, I'm here to help. Reach out to start a conversation about how we can bring your vision to life through the art of photography. I'm looking forward to connecting with you and exploring the possibilities together.</p>
-
-            <!-- add your form here. Your submit button should 
-                                have the classes of btn, btn-secondary -->
+            <!-- Contact Form Section-->
             <form method="post">
               {{ collaborate_form | crispy }}
               {% csrf_token %}
+              <!-- Submit button for the form -->
               <button class="btn btn-secondary"
                 type="submit">Submit</button>
             </form>

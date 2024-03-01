@@ -9,7 +9,7 @@ class PostAdmin(SummernoteModelAdmin):
     Admin interface for managing blog posts with
     Summernote editor for the content field.
     """
-    list_display = ('title', 'slug', 'status', 'created_on',)
+    list_display = ('title', 'status', 'created_on',)
     search_fields = ['title', 'content', ]
     list_filter = ('status', 'created_on',)
     prepopulated_fields = {'slug': ('title',)}

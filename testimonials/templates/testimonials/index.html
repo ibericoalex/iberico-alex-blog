@@ -4,18 +4,21 @@
 
 {% block content %}
 <div class="container mt-5">
-    <!-- Headline for Testimonials -->
+    <!-- Testimonials Headline Section -->
     <h2 class="text-center mb-4">Latest Testimonials</h2>
 
     <!-- Testimonials Entries Section -->
     <div class="col-12 mt-3">
         <div class="row">
+            <!-- Loop through each testimonial -->
             {% for testimonial in testimonials %}
             <div class="col-md-4 mb-4">
                 <div class="card">
                     <div class="card-body shadow">
+                            <!-- Display testimonial content -->
                             <article class="card-text">{{ testimonial.content | safe }}</article>
-                      </div>
+                    </div>
+                    <!-- Display author and creation date of the testimonial -->
                     <div class="row">
                         <div class="col text-right">                    
                         <p class="text-end text-muted"><em>Written by <strong>{{ testimonial.author }}</strong> on {{ testimonial.created_on|date:"d/m/Y" }}</em></p>
@@ -23,6 +26,7 @@
                     </div>
                 </div>
             </div>
+            <!-- Create a new row for every 3 testimonials to maintain layout -->
             {% if forloop.counter|divisibleby:3 %}
         </div>
         <div class="row">
@@ -32,18 +36,19 @@
     </div>
     <hr/>
 
-    <!-- Leave your testimonials Section -->
+    <!-- Leave your Testimonial Section -->
     <div class="row justify-content-center">
         <div class="col-12 col-md-10 my-5">
             <h2 class="text-center mb-4">Leave your testimonial!</h2>
             <p>I'm eager to hear about your journey with Iberico Alex Photography! Your insights and stories are incredibly important to me, as they reflect the heart and soul I pour into every photograph. Whether it was a quiet, intimate session or a grand, joyous celebration, I invite you to share how the moments we captured together have resonated with you. Your testimonial is a cherished chapter in my ongoing story of passion and creativity, and I look forward to reading your reflections.</p>
 
-            <!-- Submit Form Section -->
+            <!-- Testimonial Submission Form  -->
             <form method="post">
-              {{ form | crispy }}
-              {% csrf_token %}
-              <button class="btn btn-secondary"
-                type="submit">Submit</button>
+                <!-- Display the form fields -->
+                {{ form | crispy }}
+                {% csrf_token %}
+                <!-- Submit button for the form -->
+                <button class="btn btn-secondary" type="submit">Submit</button>
             </form>
         </div>
     </div>

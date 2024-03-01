@@ -5,37 +5,47 @@
 <!-- index.html content starts here -->
 <div class="container mt-5">
     <div class="row">
-        <!-- Headline for Blog entries -->
+        <!-- Blog Headline Section -->
         <h2 class="text-center mb-4">Latest Blog Entries</h2>
 
         <!-- Blog Entries Section -->
         <div class="col-12 mt-3">
             <div class="row">
+                <!-- Loop through each post in post_list -->
                 {% for post in post_list %}
                 <div class="col-md-4 mb-4">
                     <div class="card shadow">
                         <div class="card-body">
+                            <!-- Image container -->
                             <div class="image-container">
+                                <!-- Condition: Show default image if no featured image -->
                                 {% if "placeholder" in post.featured_image.url %}
                                 <img class="card-img-top" src="{% static 'images/default.jpg' %}"
                                   alt="{{ post.title }}">
                                 {% else %}
+                                <!-- Show featured image -->
                                 <img class="card-img-top" src=" {{ post.featured_image.url }}"
                                   alt="{{ post.title }}">
                                 {% endif %}
                             </div>
+
+                            <!-- Post title and excerpt -->
                             <a href="{% url 'post_detail' post.slug %}" class="post-link">
                                 <h2 class="card-title mt-2" style="font-size: 1.5rem;">{{ post.title }}</h2>
                                 <p class="card-text">{{ post.excerpt }}</p>
                             </a>
                         </div>
                     </div>
+
+                    <!-- Post update date -->
                     <div class="row">
                         <div class="col text-right">                    
                         <p class="text-end text-muted"><em>Updated {{ post.updated_on|date:"d/m/Y" }}</em></p>
                         </div>
                     </div>
                 </div>
+
+                <!-- New row for every 3 posts -->
                 {% if forloop.counter|divisibleby:3 %}
             </div>
             <div class="row">
@@ -45,15 +55,19 @@
             </div>
         </div>
     </div>
+
+    <!-- Pagination Section -->
     {% if is_paginated %}
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center">
+            <!-- Previous Page Link -->
             {% if page_obj.has_previous %}
             <li>
                 <a href="?page={{ page_obj.previous_page_number }}"
                   class="page-link">&laquo; PREV</a>
             </li>
             {% endif %}
+            <!-- Next Page Link -->
             {% if page_obj.has_next %}
             <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
             {% endif %}
