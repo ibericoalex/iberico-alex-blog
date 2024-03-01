@@ -1,10 +1,10 @@
 # **Iberico Alex Photography - Portfolio Project 4**
 
-Leveraging the rich tapestry of experiences from my previous projects, I've chosen to further nurture my passion for photography by creating a dedicated platform - Iberico Alex Photography. This blog serves as a vibrant hub where enthusiasts and clients alike can delve into the essence of my photographic journey. It's designed to be an interactive space that not only showcases my work but also fosters a community of like-minded individuals.
+Leveraging the rich tapestry of experiences from my previous projects, I've chosen to further nurture my passion for photography by creating a dedicated blog platform - Iberico Alex Photography. This blog serves as a vibrant hub where enthusiasts and clients alike can delve into the essence of my photographic journey. It's designed to be an interactive space that not only showcases my work but also fosters a community of like-minded individuals. Key Features of Iberico Alex Photography: Curated Blog Posts, Testimonial Showcase, Direct Engagement and an User-Friendly Interface.
 
 Live deployment link can be found [here](https://iberico-alex-blog-5bcad95fbc62.herokuapp.com/).
 
-![Website mockup](./assets/documentation/Website-mockup.png)
+![Website mockup](./documentation/images/website-mockup.png)
 
 ## **Table of Contents**
 
@@ -31,6 +31,8 @@ Live deployment link can be found [here](https://iberico-alex-blog-5bcad95fbc62.
 
 ## **User Stories**
 
+NEEDS TO BE UPDATED
+
 - As a **user**, I want **to be able to view a consistent colour scheme across the website** so that it **provides a seamless and harmonious browsing experience**.
 
 - As a **user**, I want **to be able to find and access the navigation bar** so that I can **navigate effortlessly through the platform**.
@@ -45,30 +47,38 @@ Live deployment link can be found [here](https://iberico-alex-blog-5bcad95fbc62.
 
 
 ## **Design**
-For my project, I used my existing [website](https://www.ibericoalex.com/), built with [wix.com](https://www.wix.com/) website builder, as the foundation. The website showcases a bold, minimal, and clean design that perfectly complements my work and artistic perspective.
+For this project, I drew inspiration from the previous [PP1 project](https://ibericoalex.github.io/iberico-alex-photography/) to ensure consistency. The website features a bold, minimalist, and sleek design that perfectly aligns with my artistic vision and work.
 
-All the images and videos presented in the project are exclusively captured and owned by me.
+All the images presented in the project are exclusively captured and owned by me.
+
 
 ### **Colour**
-I have chosen bold colors like red, black, and white to represent my artistic brand. These colors not only enhance the visual appeal but also ensure easy readability for users. To generate the color scheme, I utilized [Coolors.co](https://coolors.co/ff0000-0d0d0d-fafafa-525252).
+I used the same color code - bold colors like red, black, and white to represent my artistic brand. These colors not only enhance the visual appeal but also ensure easy readability for users. To generate the color scheme, I utilized [Coolors.co](https://coolors.co/ff0000-0d0d0d-fafafa-525252).
 
-![Color palette](./assets/documentation/Color-palette.png)
+![Color palette](./documentation/images/Color-palette.png)
+
 ### **Fonts**
-I incorporated fonts from [Google Fonts](https://fonts.google.com/) into my website. For the main headers and logo, I selected the font Roboto, while for the body text, I opted for Nunito. These font choices add a stylish and cohesive touch to the overall design.
+I incorporated fonts from [Google Fonts](https://fonts.google.com/) into my website. I mainly used Lato and Roboto. These font choices add a stylish and cohesive touch to the overall design.
 
 ### **Wireframes**
-Before proceeding with any HTML or CSS coding, I made use of Balsamiq to create wireframes for each of the four pages. This step allowed me to envision and solidify the desired visual structure of the changes I intended to implement from my previous website. By establishing a clear blueprint through wireframes, I could confidently proceed with the development process.
+Before proceeding with any HTML, CSS, Python and JavaScript coding, I made use of Balsamiq to create wireframes for my whoe website. By establishing a clear blueprint through wireframes, I could confidently proceed with the development process.
 
-- Index/Portfolio page
+- Index/Blog page
 ![Wireframe index](./assets/documentation/index.png)
 
-- Videos page
+- Testimonials page
 ![Wireframe videos](./assets/documentation/Videos.png)
 
 - About page
 ![Wireframe about](./assets/documentation/About.png)
 
-- Contact page
+- Register page
+![Wireframe contact](./assets/documentation/Contact.png)
+
+- Login page
+![Wireframe contact](./assets/documentation/Contact.png)
+
+- Logout page
 ![Wireframe contact](./assets/documentation/Contact.png)
 
 ## **Features**
@@ -78,36 +88,42 @@ As the user navigates through the website, the following elements consistently a
  - **Logo and Navigation Bar** 
     - The logo and navigation bar are prominently displayed on every page of the website. These elements have been carefully designed and optimized to ensure seamless functionality across various screen sizes. The logo serves as a clickable link, directing users back to the homepage/portfolio. Additionally, each link within the navigation menu accurately leads users to the corresponding page, enhancing the overall user experience.
 
+    Worth mentioning, once we access the website through a mobile, the menu collapses - hamburger menu - and allows to toggle the navigation links.
+
     ![Logo and navigation menu](./assets/documentation/logo-nav.png)
+    ![Logo and navigation menu collapsed](./assets/documentation/logo-nav.png)
 
 - **Favicon**
     - The favicon displayed on the browser tab encapsulates the branding of Iberico Alex Photography, providing a small yet impactful visual representation of the website's identity.
 
-    ![Favicon](./assets/documentation/Logo-favicon.png)
+    ![Favicon](./documentation/images/Logo-favicon.png)
 
 - **Footer**
     - The footer is consistently visible on every page of the website. It features social media icons that are linked to the corresponding social media platforms, allowing users to easily connect and stay updated with the photographer on these platforms. This enables seamless access to the artist's social media presence and encourages users to stay connected and engaged with their latest updates.
 
     ![Footer](./assets/documentation/footer.png)
 
-### **Portfolio**
+### **Blog**
 
-The landing page serves as the initial entry point for users when they first visit the website. It prominently showcases the portfolio of the photographer, providing a captivating introduction to his body of work.
+The landing page serves as the initial entry point for users when they first visit the website. It prominently showcases the blog entires curated by the photographer, providing interesting insights into photographic topics.
 
-The photo gallery draws inspiration from the Code Institute Love Running gallery masonry. When hovering over an image, it reduces its opacity to indicate the selected photo. The ultimate goal is to enable image enlargement upon clicking; however, implementing this functionality would require the use of JavaScript.
+The layout is inspired by Code Institute's "I think therefor I blog" Django project. And have been carefully adapted to stay aligned with my bold and minimal design. 
+
+When hovering over the text, the color changes to red indicating the selected blog entry. The ultimate goal is for the User to click on the post entry and access the complete post. 
 
 Additional noteworthy features include:
-- The gallery is fully responsive, adjusting the column count based on the screen size for optimal viewing.
-- The navigation bar has a visually appealing effect with a blurred transparent background color.
-- On smaller screens, the navigation bar adapts by switching to a centered layout, ensuring both the logo and navigation options are displayed in a user-friendly manner.
+- The blog entries are fully responsive, adjusting the column count based on the screen size for optimal viewing.
+- Pagination available on the bottom of the Blog entries, allowing the User to navigate to previous entries.
+- Mention of update date directly below the blog entry.
+
 
 ![landing-page](./assets/documentation/landing-page.png)
 
-### **Videos**
+### **Individual Blog Entry page**
 
-The video page features a minimalist layout that places central focus on the curated video. Below the main video, additional videos are displayed as thumbnails, providing easy access to more content. Users can find relevant information about the curated video directly below, allowing them to gain insights and context. This streamlined design ensures a straightforward and immersive video viewing experience.
+The Individual Blog Entry page features the whole blog entry. Users can find relevat information about when the post was created (which differs from the update date shown on the Glog page), the content of the post, a comment section - allowing Users to comment and interact with each other and finally on the lefthand side we can find the leave a comment form section - space that allows users to input their comments.
 
-The ultimate goal is to implement a functionality where clicking on the additional video thumbnails would switch the main video and its accompanying description. However, achieving this functionality would require expertise in JavaScript programming.
+The ultimate goal would be to add like buttons and User's profile image. Unfortunately, due to time constraints, this was not possible at this stage, but definitely something I would like to pursue given the opportunity.
 
 ![videos-page](./assets/documentation/videos-page.png)
 
@@ -115,28 +131,34 @@ The ultimate goal is to implement a functionality where clicking on the addition
 
 This page serves as an opportunity for users to delve deeper into the photographer's background and learn more about his artistic journey and expertise.
 
+Additionally, they can contact the photogapher directly through the **Get in touch** form. This provides users with a convenient means to directly reach out to the photographer and inquire about their services. The contact form, which includes required fields, ensures that all necessary information is correctly filled out.
+
 ![videos-page](./assets/documentation/about-page.png)
 
-### **Contact**
+### **Register / Login / Logout**
 
-The contact page provides users with a convenient means to directly reach out to the photographer and inquire about their services. The contact form, which includes required fields, ensures that all necessary information is correctly filled out.
-
-The embedded Google Maps feature enables users to easily locate and identify the precise geographical location where the photographer is based. This provides users with a convenient way to get a visual representation of the photographer's physical presence and facilitates better understanding of their location.
+The Register, Login and Lougout page maintained their basic style and layout, only the content was amended for consitency. The forms in both Register qnd Sign In page prompt required fields, ensuring that all necessary information is correctly provided.
 
 ![videos-page](./assets/documentation/contact-page.png)
+![videos-page](./assets/documentation/contact-page.png)
+![videos-page](./assets/documentation/contact-page.png)
+
 
 ## **Technologies, Languages & Programs Used**
 
 * [HTML](https://www.w3schools.com/html/): Markup language for creating web pages.
 * [CSS](https://www.w3schools.com/CSS/): Stylesheet language for styling the appearance of web pages.
 * [GitHub](https://github.com/): Web-based platform for version control and collaboration on software projects.
-* [GitHub Pages](https://pages.github.com/): Hosting service provided by GitHub for publishing static web pages.
+* [Heroku](https://heroku.com/): a cloud platform as a service supporting several programming languages.
+* [CI PEP8 Online](https://pep8ci.herokuapp.com/): CI Python Linter - Tool to check and enforce python coding standards.
 * [Google Fonts](https://fonts.google.com/): Library of free and open-source web fonts.
 * [Google Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/): Automated tool for auditing and improving web page quality.
 * [W3C Validator](https://validator.w3.org/): Tool for checking HTML and CSS code compliance with web standards.
-* [CodeAnywhere](https://codeanywhere.com/): Cloud-based integrated development environment (IDE) for coding, collaborating, and deploying projects.
+* [GitPod](https://gitpod.io/): Cloud-based integrated development environment (IDE) for coding, collaborating, and deploying projects.
 * [VSCode](https://code.visualstudio.com/): Free and highly extensible source code editor with built-in features for editing, debugging, and version control integration. It supports various programming languages and is available for multiple platforms.
 * [ChatGPT](https://chat.openai.com/): Artificial intelligence chatbot.
+* [Balsamiq Wireframes](https://balsamiq.com/wireframes/): Rapid low-fidelity UI wireframing tool.
+* [Techsini](https://chat.openai.com/): Mockup generator.
 
 ## **Testing**
 
@@ -144,33 +166,48 @@ Testing available [here](./TESTING.md)
 
 ## **Deployment**
 
-The procedure for deployment followed the "Creating your site" steps provided in GitHub Docs:
-- Log into Github.
-- Select desired GitHub Repository to be deployed live.
-- Underneath the repository name, click the “Settings” option.
-- In the sub-section list on the left, under “Code and automation”, click “Pages”.
-- Within the ”Source” section choose ”main” as Branch and root as folder and click ”Save”.
-- The page refreshes and a website shall then deploy via a link.
-- The following is the live link deployed: https://ibericoalex.github.io/iberico-alex-photography/
+### Version Control
+Version control was managed using Git within Visual Studio Code to update the main repository. Follow these steps:
 
-### **Local Deployment**
+1. Open the VS Code terminal and execute the command `git add .` to stage your changes and updates.
 
-This repository can be cloned and run locally with the following steps:
-- Login to GitHub.
-- Select repository named: ibericoalex/iberico-alex-photography
-- Click code toggle button and copy the url (i.e., https://github.com/ibericoalex/iberico-alex-photography.git).
-- In your IDE, open the terminal and run the git clone command (i.e., git clone https://github.com/ibericoalex/iberico-alex-photography.git). The repository will now be cloned in your workspace.
+2. Use the command `git commit -m "Insert a short descriptive text"` to commit your changes and update the files.
+
+3. Finally, employ the `git push` command to push your committed changes to the main repository.
+
+### Page Deployment
+The application was deployed using Heroku CLI. The deployment process is as follows:
+
+1. After creating and logging into your Heroku account, navigate to the dashboard and click "New" to create a new app.
+
+2. Choose a unique name for your app, select your desired region, and then click "Create app."
+
+3. In the "Settings" section, find and click on "Config Vars."
+
+4. Add the necessary Config Vars. For this app, only one is required: `KEY = PORT : VALUE = 8000`.
+
+5. Set up the buildpacks in the following order: `Python` and `NodeJS`.
+
+6. Click "Deploy" section.
+
+7. Scroll down to the "Deployment Method" section and select "GitHub."
+
+8. Choose the repository you want to deploy and connect it to Heroku.
+
+9. For deployment options, for this project I chose "Manual deploy".
+
+Live deployment link - [Iberico Alex Blog](https://iberico-alex-blog-5bcad95fbc62.herokuapp.com/)
+
 
 ## **Credits**
 
 ### **Code**
-- The image gallery code took inspiration from Code Institute's Love Running walkthrough project, with custom tweaks for this website.
-- The footer code was borrowed from the same Love Running walkthrough project.
-- The YouTube embedded feature code was used for displaying the curated video on the Videos page.
-- The Google Maps embedded feature code was utilized on the Contact page.
-- The JavaScript code for displaying the current year in the footer was generously provided by [Samuel Ukachukwu](https://github.com/SamuelUkachukwu) during June's Pride hackathon event.  
+- Most of the code was used from the **I Think Therefore I Blog" Code Institue Project.
+- App's models, views and forms were created and adapted taking into account the information provided during CI's Django curriculum content. 
+- Help from my mentor Akshat, who verified and approved the code
+ 
 ### **Content**
-- I personally wrote all the content on the website. The content was then refined and corrected with the help of ChatGPT, including the README file.
+- I personally wrote relevant sections on the website and used ChatGPT to populate the blog entries (due to its extense content). The content was then refined and corrected with the help of ChatGPT, including the README file.
 
 ### **Design**
 - Wireframes were created using [Balsamiq](https://balsamiq.com/)
@@ -179,4 +216,6 @@ This repository can be cloned and run locally with the following steps:
 ### **Media**
 - The favicon was designed and created by me using Adobe Photoshop.
 - All the photos displayed on the website were captured by me.
-- I personally produced all the videos featured on the website.
+
+## **Acknowledgements**
+My heartfelt thanks to my mentor, Akshat Garg. His invaluable guidance and unwavering support were crucial to this project's success. I deeply appreciate his promptness and dedication throughout my journey.
