@@ -31,8 +31,8 @@
 
                             <!-- Post title and excerpt -->
                             <a href="{% url 'post_detail' post.slug %}" class="post-link">
-                                <h2 class="card-title mt-2" style="font-size: 1.5rem;">{{ post.title }}</h2>
-                                <p class="card-text">{{ post.excerpt }}</p>
+                                <h2 class="card-title mt-2 title-clamp" style="font-size: 1.5rem;">{{ post.title }}</h2>
+                                <p class="card-text line-clamp">{{ post.excerpt }}</p>
                             </a>
                         </div>
                     </div>

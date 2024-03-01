@@ -33,7 +33,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['.herokuapp.com',
                  'localhost',
-                 '8000-ibericoalex-ibericoalex-xbcr14nr5sd.ws-eu108.gitpod.io']
+                 '8000-ibericoalex-ibericoalex-xbcr14nr5sd.ws-eu108.gitpod.io',]
 
 
 # Application definition

@@ -12,11 +12,11 @@
         <div class="col-10 col-md-4 text-center">
           <!-- Condition: Display default image if no profile image is available -->
           {% if "placeholder" in about.profile_image.url %}
-          <img src="{% static 'images/nobody.jpg' %}" width="75%" class="profile-image"
+          <img src="{% static 'images/nobody.jpg' %}" class="profile-image"
             alt="placeholder image" >
           {% else %}
           <!-- Display profile image if available -->
-          <img src="{{ about.profile_image.url }}"  width="75%" class="profile-image"
+          <img src="{{ about.profile_image.url }}"  class="profile-image"
             alt="{{ about.title }}">
           {% endif %}
         </div>
