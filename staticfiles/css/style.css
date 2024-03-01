@@ -91,8 +91,8 @@ body {
     overflow: hidden;
 }
 
-.profile-img {
-    width: 300px !important;
+.profile-image {
+    width: 35% !important;
 }
 
 .post-link {
