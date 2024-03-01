@@ -1,110 +1,182 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **Iberico Alex Photography - Portfolio Project 4**
 
-Welcome Iberico Alex ,
+Leveraging the rich tapestry of experiences from my previous projects, I've chosen to further nurture my passion for photography by creating a dedicated platform - Iberico Alex Photography. This blog serves as a vibrant hub where enthusiasts and clients alike can delve into the essence of my photographic journey. It's designed to be an interactive space that not only showcases my work but also fosters a community of like-minded individuals.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Live deployment link can be found [here](https://iberico-alex-blog-5bcad95fbc62.herokuapp.com/).
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+![Website mockup](./assets/documentation/Website-mockup.png)
 
-## Gitpod Reminders
+## **Table of Contents**
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+1. [User Stories](#user-stories "User Stories")
+2. [Design](#design "Design")
+   - [Colour](#colour "Colour")
+   - [Fonts](#fonts "Fonts")
+   - [Wireframes](#wireframes "Wireframes")
+3. [Features](#features "Features")
+   - [Common Features](#common-features "Common Features")    
+   - [Portfolio](#portfolio "Portfolio")
+   - [Videos](#videos "Videos")
+   - [About](#about "About")
+   - [Contact](#contact "contact")
+4. [Technologies, Languages & Programs Used](#technologies-languages--programs-used)
+5. [Testing](#testing "Testing")
+6. [Deployment](#deployment "Deployment")
+    - [Local Deployment](#local-deployment "Local Deployment")
+8. [Credits](#credits "Credits")
+    - [Code](#code "Code")
+    - [Content](#content "Content")
+    - [Design](#design "Design")
+    - [Media](#media "Media")
 
-`python3 -m http.server`
+## **User Stories**
 
-A blue button should appear to click: _Make Public_,
+- As a **user**, I want **to be able to view a consistent colour scheme across the website** so that it **provides a seamless and harmonious browsing experience**.
 
-Another blue button should appear to click: _Open Browser_.
+- As a **user**, I want **to be able to find and access the navigation bar** so that I can **navigate effortlessly through the platform**.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+- As a **user**, I want **to be able to view the footer section** so that I can **find social media links**.
 
-A blue button should appear to click: _Make Public_,
+- As a **user**, I want **to be able to explore Iberico Alex's work, including both photos and videos** so that I  **can appreciate the artist's talent and style**.
 
-Another blue button should appear to click: _Open Browser_.
+- As a **user**, I want **to be able to learn more about the photographer** so that I can **ensure that his background and artistic approach align with my preferences**.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+- As a **user**, I want **to be able to contact the artist** so that I can **inquire about the services offered**.
 
-To log into the Heroku toolbelt CLI:
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+## **Design**
+For my project, I used my existing [website](https://www.ibericoalex.com/), built with [wix.com](https://www.wix.com/) website builder, as the foundation. The website showcases a bold, minimal, and clean design that perfectly complements my work and artistic perspective.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+All the images and videos presented in the project are exclusively captured and owned by me.
 
-------
+### **Colour**
+I have chosen bold colors like red, black, and white to represent my artistic brand. These colors not only enhance the visual appeal but also ensure easy readability for users. To generate the color scheme, I utilized [Coolors.co](https://coolors.co/ff0000-0d0d0d-fafafa-525252).
 
-## Release History
+![Color palette](./assets/documentation/Color-palette.png)
+### **Fonts**
+I incorporated fonts from [Google Fonts](https://fonts.google.com/) into my website. For the main headers and logo, I selected the font Roboto, while for the body text, I opted for Nunito. These font choices add a stylish and cohesive touch to the overall design.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### **Wireframes**
+Before proceeding with any HTML or CSS coding, I made use of Balsamiq to create wireframes for each of the four pages. This step allowed me to envision and solidify the desired visual structure of the changes I intended to implement from my previous website. By establishing a clear blueprint through wireframes, I could confidently proceed with the development process.
 
-**September 20 2023:** Update Python version to 3.9.17.
+- Index/Portfolio page
+![Wireframe index](./assets/documentation/index.png)
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+- Videos page
+![Wireframe videos](./assets/documentation/Videos.png)
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+- About page
+![Wireframe about](./assets/documentation/About.png)
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+- Contact page
+![Wireframe contact](./assets/documentation/Contact.png)
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+## **Features**
+### **Common Features**
+As the user navigates through the website, the following elements consistently appear across every page. These elements maintain a cohesive presence throughout the user's browsing experience.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+ - **Logo and Navigation Bar** 
+    - The logo and navigation bar are prominently displayed on every page of the website. These elements have been carefully designed and optimized to ensure seamless functionality across various screen sizes. The logo serves as a clickable link, directing users back to the homepage/portfolio. Additionally, each link within the navigation menu accurately leads users to the corresponding page, enhancing the overall user experience.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+    ![Logo and navigation menu](./assets/documentation/logo-nav.png)
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+- **Favicon**
+    - The favicon displayed on the browser tab encapsulates the branding of Iberico Alex Photography, providing a small yet impactful visual representation of the website's identity.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+    ![Favicon](./assets/documentation/Logo-favicon.png)
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+- **Footer**
+    - The footer is consistently visible on every page of the website. It features social media icons that are linked to the corresponding social media platforms, allowing users to easily connect and stay updated with the photographer on these platforms. This enables seamless access to the artist's social media presence and encourages users to stay connected and engaged with their latest updates.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+    ![Footer](./assets/documentation/footer.png)
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+### **Portfolio**
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+The landing page serves as the initial entry point for users when they first visit the website. It prominently showcases the portfolio of the photographer, providing a captivating introduction to his body of work.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+The photo gallery draws inspiration from the Code Institute Love Running gallery masonry. When hovering over an image, it reduces its opacity to indicate the selected photo. The ultimate goal is to enable image enlargement upon clicking; however, implementing this functionality would require the use of JavaScript.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+Additional noteworthy features include:
+- The gallery is fully responsive, adjusting the column count based on the screen size for optimal viewing.
+- The navigation bar has a visually appealing effect with a blurred transparent background color.
+- On smaller screens, the navigation bar adapts by switching to a centered layout, ensuring both the logo and navigation options are displayed in a user-friendly manner.
 
-------
+![landing-page](./assets/documentation/landing-page.png)
 
-## FAQ about the uptime script
+### **Videos**
 
-**Why have you added this script?**
+The video page features a minimalist layout that places central focus on the curated video. Below the main video, additional videos are displayed as thumbnails, providing easy access to more content. Users can find relevant information about the curated video directly below, allowing them to gain insights and context. This streamlined design ensures a straightforward and immersive video viewing experience.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+The ultimate goal is to implement a functionality where clicking on the additional video thumbnails would switch the main video and its accompanying description. However, achieving this functionality would require expertise in JavaScript programming.
 
-**How will this affect me?**
+![videos-page](./assets/documentation/videos-page.png)
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+### **About**
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+This page serves as an opportunity for users to delve deeper into the photographer's background and learn more about his artistic journey and expertise.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+![videos-page](./assets/documentation/about-page.png)
 
-**So….?**
+### **Contact**
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+The contact page provides users with a convenient means to directly reach out to the photographer and inquire about their services. The contact form, which includes required fields, ensures that all necessary information is correctly filled out.
 
-**Can I opt out?**
+The embedded Google Maps feature enables users to easily locate and identify the precise geographical location where the photographer is based. This provides users with a convenient way to get a visual representation of the photographer's physical presence and facilitates better understanding of their location.
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+![videos-page](./assets/documentation/contact-page.png)
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+## **Technologies, Languages & Programs Used**
 
-**Anything more?**
+* [HTML](https://www.w3schools.com/html/): Markup language for creating web pages.
+* [CSS](https://www.w3schools.com/CSS/): Stylesheet language for styling the appearance of web pages.
+* [GitHub](https://github.com/): Web-based platform for version control and collaboration on software projects.
+* [GitHub Pages](https://pages.github.com/): Hosting service provided by GitHub for publishing static web pages.
+* [Google Fonts](https://fonts.google.com/): Library of free and open-source web fonts.
+* [Google Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/): Automated tool for auditing and improving web page quality.
+* [W3C Validator](https://validator.w3.org/): Tool for checking HTML and CSS code compliance with web standards.
+* [CodeAnywhere](https://codeanywhere.com/): Cloud-based integrated development environment (IDE) for coding, collaborating, and deploying projects.
+* [VSCode](https://code.visualstudio.com/): Free and highly extensible source code editor with built-in features for editing, debugging, and version control integration. It supports various programming languages and is available for multiple platforms.
+* [ChatGPT](https://chat.openai.com/): Artificial intelligence chatbot.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+## **Testing**
 
----
+Testing available [here](./TESTING.md)
 
-Happy coding!
+## **Deployment**
+
+The procedure for deployment followed the "Creating your site" steps provided in GitHub Docs:
+- Log into Github.
+- Select desired GitHub Repository to be deployed live.
+- Underneath the repository name, click the “Settings” option.
+- In the sub-section list on the left, under “Code and automation”, click “Pages”.
+- Within the ”Source” section choose ”main” as Branch and root as folder and click ”Save”.
+- The page refreshes and a website shall then deploy via a link.
+- The following is the live link deployed: https://ibericoalex.github.io/iberico-alex-photography/
+
+### **Local Deployment**
+
+This repository can be cloned and run locally with the following steps:
+- Login to GitHub.
+- Select repository named: ibericoalex/iberico-alex-photography
+- Click code toggle button and copy the url (i.e., https://github.com/ibericoalex/iberico-alex-photography.git).
+- In your IDE, open the terminal and run the git clone command (i.e., git clone https://github.com/ibericoalex/iberico-alex-photography.git). The repository will now be cloned in your workspace.
+
+## **Credits**
+
+### **Code**
+- The image gallery code took inspiration from Code Institute's Love Running walkthrough project, with custom tweaks for this website.
+- The footer code was borrowed from the same Love Running walkthrough project.
+- The YouTube embedded feature code was used for displaying the curated video on the Videos page.
+- The Google Maps embedded feature code was utilized on the Contact page.
+- The JavaScript code for displaying the current year in the footer was generously provided by [Samuel Ukachukwu](https://github.com/SamuelUkachukwu) during June's Pride hackathon event.  
+### **Content**
+- I personally wrote all the content on the website. The content was then refined and corrected with the help of ChatGPT, including the README file.
+
+### **Design**
+- Wireframes were created using [Balsamiq](https://balsamiq.com/)
+- The color scheme was carefully validated for readability using [Webaim](https://webaim.org/resources/contrastchecker/)
+
+### **Media**
+- The favicon was designed and created by me using Adobe Photoshop.
+- All the photos displayed on the website were captured by me.
+- I personally produced all the videos featured on the website.
