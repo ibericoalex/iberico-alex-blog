@@ -64,6 +64,7 @@ body {
     display: inline-block;
     height: 33vh;
     width: 100%;
+    min-height: 200px;
 }
 
 .masthead-text {
