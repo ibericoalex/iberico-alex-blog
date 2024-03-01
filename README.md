@@ -8,22 +8,41 @@ The live deployment of the blog can be accessed [here](https://iberico-alex-blog
 
 ## **Table of Contents**
 
-1. [User Stories](#user-stories)
-2. [Design](#design)
+1. [Introduction](#iberico-alex-blog---portfolio-project-4)
+2. [User Stories](#user-stories)
+   - [Admin User Stories](#admin-user-stories)
+   - [Regular User Stories](#regular-user-stories)
+   - [Anonymous User Stories](#anonymous-user-stories)
+   - [Agile Methodology](#agile-methodology)
+3. [Design](#design)
    - [Colour Scheme](#colour-scheme)
    - [Typography](#typography)
    - [Wireframes](#wireframes)
-3. [Features](#features)
+4. [Features](#features)
    - [Common Features](#common-features)
+   - [Blog Page](#blog-page)
+   - [Blog Post Page](#blog-post-page)
+   - [Testimonials Page](#testimonials-page)
+   - [About Page](#about-page)
+   - [Register / Login / Logout](#register--login--logout)
+   - [Alert Messages](#alert-messages)
    - [Features for Future Releases](#features-for-future-releases)
-4. [Technologies Used](#technologies-used)
-5. [Testing](#testing)
-6. [Deployment](#deployment)
-7. [Credits](#credits)
+5. [Technologies Used](#technologies-used)
+6. [Database Design - ERD Tables](#database-design---erd-tables)
+   - [User Model](#user-model-djangos-built-in-user-model)
+   - [About Model](#about-model)
+   - [Post Model](#post-model)
+   - [Comment Model](#comment-model)
+   - [Testimonials Model](#testimonials-model)
+   - [Relationships Summary](#relationships-summary)
+7. [Testing](#testing)
+8. [Deployment](#deployment)
+9. [Credits](#credits)
    - [Code](#code)
    - [Content](#content)
    - [Media](#media)
    - [Acknowledgements](#acknowledgements)
+
 
 ## **User Stories**
 
@@ -258,6 +277,67 @@ Enhances user feedback with clear, concise messages following various actions, s
 * [Balsamiq Wireframes](https://balsamiq.com/wireframes/): Rapid low-fidelity UI wireframing tool.
 * [Techsini](https://chat.openai.com/): Mockup generator.
 </details>
+
+## Database Design - ERD Tables
+
+- ### User Model (Django's built-in User model)
+
+| User Attributes | Type/Relation | Notes |
+|-----------------|---------------|-------|
+| username        | CharField     | Provided by Django's auth system |
+| email           | EmailField    | Provided by Django's auth system |
+
+
+- ### About Model
+
+| About Attributes | Type/Relation      | Notes                          |
+|------------------|--------------------|--------------------------------|
+| title            | CharField          | max_length=200                 |
+| profile_image    | CloudinaryField    | 'image', default='placeholder' |
+| updated_on       | DateTimeField      | auto_now=True                  |
+| content          | TextField          |                                |
+
+- ### Post Model
+
+| Post Attributes  | Type/Relation      | Notes                          |
+|------------------|--------------------|--------------------------------|
+| title            | CharField          | max_length=200, unique=True    |
+| slug             | SlugField          | max_length=200, unique=True    |
+| author           | ForeignKey(User)   | related_name="blog_posts"      |
+| featured_image   | CloudinaryField    | 'image', default='placeholder' |
+| content          | TextField          |                                |
+| created_on       | DateTimeField      | auto_now_add=True              |
+| status           | IntegerField       | choices=STATUS, default=0      |
+| excerpt          | TextField          | blank=True                     |
+| updated_on       | DateTimeField      | auto_now=True                  |
+
+- ### Comment Model
+
+| Comment Attributes | Type/Relation     | Notes                          |
+|--------------------|-------------------|--------------------------------|
+| post               | ForeignKey(Post)  | related_name="comments"        |
+| author             | ForeignKey(User)  | related_name="commenter"       |
+| body               | TextField         |                                |
+| approved           | BooleanField      | default=False                  |
+| created_on         | DateTimeField     | auto_now_add=True              |
+| updated_on         | DateTimeField     | auto_now=True                  |
+
+
+- ### Testimonials Model
+
+| Testimonials Attributes | Type/Relation     | Notes                      |
+|-------------------------|-------------------|----------------------------|
+| author                  | ForeignKey(User)  | related_name="testimonials_posts" |
+| content                 | TextField         |                            |
+| created_on              | DateTimeField     | auto_now_add=True          |
+| status                  | IntegerField      | choices=STATUS, default=0  |
+
+## Relationships Summary
+
+- User to Post: One-to-Many (A user can author multiple posts)
+- Post to Comment: One-to-Many (A post can have multiple comments)
+- User to Comment: One-to-Many (A user can author multiple comments)
+- User to Testimonials: One-to-Many (A user can author multiple testimonials)
 
 ## **Testing**
 

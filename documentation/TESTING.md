@@ -3,6 +3,9 @@
 1. [Testing Overview](#testing-overview)
    - [User Testing Feedback](#user-testing-feedback)
    - [Comprehensive Manual Testing](#comprehensive-manual-testing)
+     - [Admin User Stories](#admin-user-stories)
+     - [Regular User Stories](#regular-user-stories)
+     - [Anonymous User Stories](#anonymous-user-stories)
    - [Cross-Browser Compatibility](#cross-browser-compatibility)
    - [Device Responsiveness](#device-responsiveness)
 2. [Identified Bugs](#identified-bugs)
@@ -10,6 +13,7 @@
    - [HTML Validation](#html-validation)
    - [CSS Validation](#css-validation)
    - [Performance Metrics](#performance-metrics)
+
 
 ## **Testing Overview**
 

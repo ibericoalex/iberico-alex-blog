@@ -1,3 +1,13 @@
+## **Table of Contents**
+
+1. [Project Deployment Guide](#project-deployment-guide)
+2. [Setting Up ElephantSQL for PostgreSQL](#setting-up-elephantsql-for-postgresql)
+3. [Integrating Cloudinary for Media Storage](#integrating-cloudinary-for-media-storage)
+4. [Deploying on Heroku](#deploying-on-heroku)
+5. [Local Setup](#local-setup)
+6. [Cloning the Project](#cloning-the-project)
+7. [Forking the Repository](#forking-the-repository)
+
 ## Project Deployment Guide
 
 The deployed version of the application is accessible on [Heroku](https://iberico-alex-blog-5bcad95fbc62.herokuapp.com/).
