@@ -345,7 +345,7 @@ Detailed testing documentation can be found [here](./documentation/TESTING.md).
 
 ## **Deployment**
 
-This project is deployed on Heroku. Detailed deployment instructions and setup for local development are available in the project's [deployment guide](.documentation/DEPLOYMENT.md).
+This project is deployed on Heroku. Detailed deployment instructions and setup for local development are available in the project's [deployment guide](./documentation/DEPLOYMENT.md).
 
 ## **Credits**
 
