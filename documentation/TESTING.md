@@ -97,13 +97,17 @@ The CSS files were checked through the [W3C CSS Validation Service](https://jigs
 Performance was evaluated using Lighthouse in Chrome's Developer Tools, yielding excellent results across various pages:
 
 - Home/blog page
+
   ![Lighthouse Home/Blog Page](./images/LH-blog-page.png)
 
 - Blog Post page
+
   ![Lighthouse Blog Post Page](./images/LH-blog-post-page.png)
 
 - Testimonials page
+
   ![Lighthouse Testimonials Page](./images/LH-testimonials-page.png)
 
 - About page
+
   ![Lighthouse About Page](./images/LH-about-page.png)
