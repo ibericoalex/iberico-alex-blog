@@ -5,12 +5,12 @@ from .models import Testimonials
 from .forms import TestimonialForm
 
 
-
 def testimonials_list(request):
     """
     Renders the Testimonials page
     """
-    testimonials = Testimonials.objects.filter(status=1).order_by('-created_on') 
+    testimonials = Testimonials.objects.filter(
+        status=1).order_by('-created_on')
     testimonials_form = TestimonialForm()
 
     if request.method == "POST":
@@ -18,7 +18,8 @@ def testimonials_list(request):
         if testimonials_form.is_valid():
             testimonials_form.instance.author = request.user
             testimonials_form.save()
-            messages.add_message(request, messages.SUCCESS, "Saved!")
+            messages.add_message(request, messages.SUCCESS,
+                                 "Testimonial sent! Awaiting approval!")
         return HttpResponseRedirect(reverse('testimonials'))
 
     return render(

@@ -3,7 +3,6 @@ from django.contrib import messages
 from .models import About
 from .forms import CollaborateForm
 
-# Create your views here.
 
 def about_me(request):
 
@@ -11,7 +10,8 @@ def about_me(request):
         collaborate_form = CollaborateForm(data=request.POST)
         if collaborate_form.is_valid():
             collaborate_form.save()
-            messages.add_message(request, messages.SUCCESS, "Inquiry request received! I will get back to you as soon as possible")
+            messages.add_message(request, messages.SUCCESS,
+                                 "Message received!")
 
     """
     Renders the About page
