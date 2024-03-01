@@ -59,76 +59,71 @@ Thorough manual testing was conducted during the project's development, aligning
 
 ### **Cross-browser Testing**
 
-Once the site was published on GitHub Pages, I conducted thorough testing on multiple browsers, including Chrome, Firefox, and Edge. I'm pleased to report that the site loaded flawlessly on all browsers without any issues or discrepancies.
+Once the site was deployed on Heroku, I conducted thorough testing on multiple browsers, including Chrome, Firefox, and Edge. I'm pleased to report that the site loaded flawlessly on all browsers without any issues or discrepancies.
 
 ### **Compatability and Responsiveness Testing**
 I personally tested the site on my iPhone 13 Pro and utilized DevTools to ensure responsiveness across various screen sizes. The site performed seamlessly on all devices, and the content adjusted flawlessly as intended for each screen size.
 
-- Iphone Pro 13
+<details>
+<summary>Click to View some screenshots of the website with iPhone 13</summary>
 
-![Home](./assets/documentation/iphone13-home.jpg) 
-![Videos](./assets/documentation/iphone13-videos.PNG)
-![About](./assets/documentation/iphone13-about.PNG)
-![Contact](./assets/documentation/iphone13-contact.PNG)
+|![iPhone](./images/iPhone1.PNG)|![iPhone](./images/iPhone2.PNG)|![iPhone](./images/iPhone3.PNG)|   |   |
+|---|---|---|---|---|
+|![iPhone](./images/iPhone4.PNG)|![iPhone](./images/iPhone5.PNG)|![iPhone](./images/iPhone6.PNG)|   |   |
+|![iPhone](./images/iPhone7.PNG)|![iPhone](./images/iPhone8.PNG)|![iPhone](./images/iPhone9.PNG)|   |   |
+|![iPhone](./images/iPhone10.PNG)|![iPhone](./images/iPhone11.PNG)|![iPhone](./images/iPhone12.PNG)|   |   |
+|![iPhone](./images/iPhone13.PNG)|![iPhone](./images/iPhone14.PNG)|![iPhone](./images/iPhone15.PNG)|   |   |
+</details>
 
-- iPad Air
-
-![Home](./assets/documentation/iPad-home.png) 
-![Videos](./assets/documentation/iPad-videos.png)
-![About](./assets/documentation/iPad-about.png)
-![Contact](./assets/documentation/iPad-contact.png)
 
 ## **Bugs**
-During the website development process, no significant bugs were encountered. However, two minor issues were identified:
-
-1. **Image Dimensions**: It was discovered that the images had dimensions of 1920x1080px, while only needing to be 500px in length on the widest side. This was adjusted to optimize display and performance.
-
-2. **Navigation Bar on Smallest Screen Size**: On screens with a width of 320px, there is a slight overlap in the navigation bar links. 
+During the website development process, no significant bugs were encountered. 
 
 ## **Validator Testing**
 
 ### **HTML Validator**
 
-The [W3C Markup Validation Service](https://validator.w3.org/) for the HTML code was passed in as a URL and returned no errors.
+The [W3C Markup Validation Service](https://validator.w3.org/) for the HTML code was passed in as a URL and returned mostly without errors; All shown errors origin from summernote form and cannot be fixed without impacting the functionality of the service. Screenshots have been provided with the errors below.
 
-- [Portfolio Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fibericoalex.github.io%2Fiberico-alex-photography%2Findex.html)
+- [Home/Blog Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fiberico-alex-blog-5bcad95fbc62.herokuapp.com%2F)
 
-![Portfolio Page Validation](./assets/documentation/html-validator-portfolio.png)
+![Home/Blog Validation](./images/HTML-blog-page.png)
 
-- [Videos Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fibericoalex.github.io%2Fiberico-alex-photography%2Fvideos.html)
+- [Blog Post Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fiberico-alex-blog-5bcad95fbc62.herokuapp.com%2Fcrafting-compelling-lookbooks-trends%2F)
 
-![Videos Page Validation](./assets/documentation/html-validator-portfolio.png)
+![Blog Post Page Validation](./images/HTML-blog-post-page.png)
 
-- [About Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fibericoalex.github.io%2Fiberico-alex-photography%2Fabout.html)
+- [Testimonials Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fiberico-alex-blog-5bcad95fbc62.herokuapp.com%2Ftestimonials%2F)
 
-![About Page Validation](./assets/documentation/html-validator-portfolio.png)
+![Testimonials Page Validation](./images/HTML-testimonials-page.png)
 
-- [Contact Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fibericoalex.github.io%2Fiberico-alex-photography%2Fcontact.html)
+- [About Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fiberico-alex-blog-5bcad95fbc62.herokuapp.com%2Fabout%2F)
 
-![Contact Page Validation](./assets/documentation/html-validator-portfolio.png)
+![About Validation](./images/HTML-about-page.png)
+
 
 ### **CSS Validator**
 
 No errors were returned through the official [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/).
 
-![css-validator-results](./assets/documentation/CSS-validator.png)
+![css-validator-results](./images/CSS-validator.png)
 
 ### **Performance Testing**
 
 The website underwent performance testing using the Lighthouse feature in Google Chrome's Developer Tools. The results can be found below. I am very pleased with the results.
 
-- Portfolio page
+- Home/blog page
 
-![css-validator-results](./assets/documentation/lighthouse-portfolio.png)
+![lighthouse-results](./images/LH-blog-page.png)
 
-- Videos page
+- Blog Post page
 
-![css-validator-results](./assets/documentation/lighthouse-videos.png)
+![lighthouse-results](./images/LH-blog-post-page.png)
+
+- Testimonials page
+
+![lighthouse-results](./images/LH-testimonials-page.png)
 
 - About page
 
-![css-validator-results](./assets/documentation/lighthouse-about.png)
-
-- Contact page
-
-![css-validator-results](./assets/documentation/lighthouse-contact.png)
+![lighthouse-results](./images/LH-about-page.png)
