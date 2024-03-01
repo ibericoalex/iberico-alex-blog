@@ -7,7 +7,12 @@ from .forms import TestimonialForm
 
 def testimonials_list(request):
     """
-    Renders the Testimonials page
+    Display the testimonials list and handle new testimonial submissions.
+
+    Retrieves approved testimonials and displays them,
+    along with a form for submitting new testimonials.
+    Upon POST request, validates and saves the new testimonial,
+    then redirects to the testimonials page.
     """
     testimonials = Testimonials.objects.filter(
         status=1).order_by('-created_on')

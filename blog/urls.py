@@ -9,3 +9,8 @@ urlpatterns = [
     path('<slug:slug>/delete_comment/<int:comment_id>',
          views.comment_delete, name='comment_delete'),
 ]
+
+"""
+URL patterns for the blog app, including home,
+post detail, edit comment, and delete comment views.
+"""

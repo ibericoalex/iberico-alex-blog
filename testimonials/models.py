@@ -1,12 +1,14 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django.db import models
 
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
 
 class Testimonials(models.Model):
+    """
+    Represents a user testimonial with content, author, and publication status.
+    """
     author = models.ForeignKey(User,
                                on_delete=models.CASCADE,
                                related_name="testimonials_posts")

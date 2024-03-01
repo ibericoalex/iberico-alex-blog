@@ -5,7 +5,9 @@ from .forms import CollaborateForm
 
 
 def about_me(request):
-
+    """
+    Render the About page and process collaboration form submissions.
+    """
     if request.method == "POST":
         collaborate_form = CollaborateForm(data=request.POST)
         if collaborate_form.is_valid():
@@ -13,9 +15,6 @@ def about_me(request):
             messages.add_message(request, messages.SUCCESS,
                                  "Message received!")
 
-    """
-    Renders the About page
-    """
     about = About.objects.all().order_by('-updated_on').first()
     collaborate_form = CollaborateForm()
 
